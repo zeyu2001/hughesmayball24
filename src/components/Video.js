@@ -18,7 +18,7 @@ const VideoLayer = () => (
 
 const VideoForeground = () => {
   return (
-    <div className="absolute inset-0 flex items-center justify-center backdrop-blur-md">
+    <div className="absolute inset-0 flex items-center justify-center backdrop-blur-sm">
       <div className="container px-5">
         <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-lg">
           ABOUT THE BALL
