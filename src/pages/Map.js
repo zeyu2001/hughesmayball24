@@ -33,31 +33,59 @@ const Heading = () => {
   )
 }
 
-const Marker = ({ text }) => <div>{text}</div>;
+const Marker = ({ text }) => <div>
+  <div className="bg-gray-900 text-white text-center rounded-lg w-20 p-2">
+    {text}
+  </div>
+  <img src="./map-pin.svg" alt="marker" className="w-10 h-10" />
+</div>;
 
 const Map = () => {
 
   const defaultProps = {
     center: { lat: 52.20088, lng: 0.1291724 },
-    zoom: 15
+    zoom: 16
   };
 
   return (
     <ParallaxProvider>
       <Heading />
       <div className="items-center shadow bg-gray-800 border-gray-700 p-10">
-        <div style={{ height: '100vh', width: '100%' }}>
-          <div style={{ height: '100vh', width: '100%' }}>
+        <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-md my-10">Sitemap</h1>
+        <div className="mt-6 text-lg leading-8 text-white drop-shadow-md">
+          <p className="mt-4"> Room 1: Something </p>
+          <p className="mt-4"> Room 2: Something else </p>
+          <p className="mt-4"> Room 3: Something else else </p>
+        </div>
+        <div className="my-10">
+          <img src="./sitemap.png" alt="sitemap" className="w-3/5 mx-auto" />
+        </div>
+
+        <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-md">Getting Here</h1>
+        <div className="grid md:grid-cols-2 gap-10">
+          <div className="mt-6 text-lg leading-8 text-white drop-shadow-md">
+            <p className="mt-4">
+              Hughes Hall is located in the heart of Cambridge, just a short walk from the city centre.
+              You can find us at:
+            </p>
+            <p className="mt-4">
+              Hughes Hall <br />
+              Wollaston Road <br />
+              Cambridge <br />
+              CB1 2EW
+            </p>
+          </div>
+          <div style={{ height: '500px', width: '100%' }}>
             <GoogleMapReact
               bootstrapURLKeys={{ key: "AIzaSyAf_tUWZaPTcvsW7QuY0B1sVQWKjNK3tDo" }}
               defaultCenter={defaultProps.center}
               defaultZoom={defaultProps.zoom}
             >
-               <Marker
-                  lat={defaultProps.center.lat}
-                  lng={defaultProps.center.lng}
-                  text="My Marker"
-                />
+              <Marker
+                lat={defaultProps.center.lat}
+                lng={defaultProps.center.lng}
+                text="We're here!"
+              />
             </GoogleMapReact>
           </div>
         </div>
