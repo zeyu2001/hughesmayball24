@@ -3,12 +3,12 @@ import { Parallax } from 'react-scroll-parallax';
 const commiteeMembers = [
   { name: 'Chavara Naidoo', title: 'Head of Finance', description: 'a person who exists in the world and does things.' },
   { name: 'Adelyn Wu', title: 'Sponsorship', description: 'a person who exists in the world and does things.' },
-  { name: 'Maw Maw Khaing', title: 'Ticketing', description: 'a person who exists in the world and does things.' },
+  { name: 'Oneir Raza', title: 'Ticketing', description: 'a person who exists in the world and does things.' },
   { name: 'Anushka', title: 'Head of Events', description: 'a person who exists in the world and does things.' },
-  { name: 'Junjie Wang', title: 'Food', description: 'a person who exists in the world and does things.' },
+  { name: 'Abbie Gellatly', title: 'Food', description: 'a person who exists in the world and does things.' },
   { name: 'Lauren Wang YueQin', title: 'Drinks and Sustainability', description: 'a person who exists in the world and does things.' },
   { name: 'Maya Schulz', title: 'Non-musical entertainment', description: 'a person who exists in the world and does things.' },
-  { name: 'Oneir Raza', title: 'Musical entertainment', description: 'a person who exists in the world and does things.' },
+  { name: 'David Whyatt', title: 'Musical entertainment', description: 'a person who exists in the world and does things.' },
   { name: 'Janina Forsyth', title: 'Head of Design', description: 'a person who exists in the world and does things.' },
   { name: 'Minerva Maheshwari', title: 'Art and Graphics', description: 'a person who exists in the world and does things.' },
   { name: 'Jack Zhan', title: 'Scene', description: 'a person who exists in the world and does things.' },
@@ -19,7 +19,7 @@ const commiteeMembers = [
   { name: 'Nowsha Farha', title: 'Head of Operations', description: 'a person who exists in the world and does things.' },
   { name: 'Xinyi Cao', title: 'Infrastructure', description: 'a person who exists in the world and does things.' },
   { name: 'Asmita Narang', title: 'Personnel & Accessibility', description: 'a person who exists in the world and does things.' },
-  { name: 'Mac', title: 'Security', description: 'a person who exists in the world and does things.' }
+  { name: 'Max Pralle', title: 'Security', description: 'a person who exists in the world and does things.' }
 ];
 
 const CommitteeMember = (member) => {
