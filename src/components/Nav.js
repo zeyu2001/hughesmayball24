@@ -3,10 +3,11 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Something1', href: '#' },
-  { name: 'Something2', href: '#' },
-  { name: 'Something3', href: '#' },
-  { name: 'Something4', href: '#' },
+  { name: 'Home', href: '/' },
+  { name: 'Timeline', href: '/timeline' },
+  { name: 'FAQ', href: '/faq' },
+  { name: 'Accessibility & Sustainability', href: '/accessibility' },
+  { name: 'Map', href: '/map' },
 ]
 
 export default function Nav() {
@@ -33,13 +34,13 @@ export default function Nav() {
       </div>
       <div className="hidden lg:flex lg:gap-x-12">
         {navigation.map((item) => (
-          <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
+          <a key={item.name} href={item.href} className="text-md font-semibold leading-6 text-white">
             {item.name}
           </a>
         ))}
       </div>
       <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" className="text-sm font-semibold leading-6 text-white">
+        <a href="#" className="text-md font-semibold leading-6 text-white">
           Get Tickets <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
@@ -67,7 +68,7 @@ export default function Nav() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700"
                   >
                     {item.name}
                   </a>

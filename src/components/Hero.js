@@ -1,5 +1,4 @@
 import { ParallaxBanner } from 'react-scroll-parallax';
-import Nav from './Nav';
 
 const MainSection = () => {
   return (
@@ -20,23 +19,18 @@ const MainSection = () => {
 
 export default function Hero() {
   return (
-    <>
-      <header className="absolute inset-x-0 top-0 z-50">
-        <Nav />
-      </header>
-      <ParallaxBanner
-        layers={[
-          { image: './hero_bg.jpg', speed: -20 },
-          {
-            speed: 0,
-            children: (
-              <MainSection />
-            ),
-          },
-          { image: './hero_fg.png', speed: 30 },
-        ]}
-        className="aspect-[2/1]" style={{ height: '100vh' }}
-      />
-    </>
+    <ParallaxBanner
+      layers={[
+        { image: './hero_bg.jpg', speed: -20 },
+        {
+          speed: 0,
+          children: (
+            <MainSection />
+          ),
+        },
+        { image: './hero_fg.png', speed: 30 },
+      ]}
+      className="aspect-[2/1]" style={{ height: '100vh' }}
+    />
   )
 }

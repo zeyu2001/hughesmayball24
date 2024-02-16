@@ -6,19 +6,61 @@ import Committee from './components/Committee';
 import Video from './components/Video';
 import Footer from './components/Footer';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Timeline from './pages/Timeline';
+import Nav from './components/Nav';
+import Map from './pages/Map';
 
-function App() {
+const NotFound = () => {
+  return (
+    <div className='text-center bg-gray-900 h-screen flex flex-col justify-center items-center'>
+      <h1 className='text-4xl text-white'>404 Not Found</h1>
+    </div>
+  );
+}
+
+const Home = () => {
   return (
     <ParallaxProvider>
-      <div className="App">
-        <Hero />
-        <Video />
-        <Section name="MEET THE COMMITTEE" backgroundImage="./committee_bg.jpg" />
-        <Committee />
-        <Footer />
-      </div>
+      <Hero />
+      <Video />
+      <Section name="MEET THE COMMITTEE" backgroundImage="./committee_bg.jpg" />
+      <Committee />
+      <Footer />
     </ParallaxProvider>
   );
 }
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/timeline",
+    element: <Timeline />,
+  },
+  {
+    path: "/map",
+    element: <Map />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]);
+
+const App = () => (
+  
+  <div className="App">
+      <header className="absolute inset-x-0 top-0 z-50">
+        <Nav />
+      </header>
+    <RouterProvider router={router} />
+  </div>
+);
 
 export default App;
