@@ -1,29 +1,53 @@
 import { Parallax } from 'react-scroll-parallax';
+import { useEffect, useRef } from 'react';
 
 const commiteeMembers = [
   { name: 'Jennifer Schwartz', title: 'President', contact: 'president@hughesmayball.co.uk' },
-  { name: 'Chavara Naidoo', title: 'Head of Finance', contact: 'finance@hughesmayball.co.uk' },
-  { name: 'Adelyn Wu', title: 'Sponsorship', contact: 'sponsorship@hughesmayball.co.uk' },
+  { name: 'Chavara Naidoo', title: 'Head of Finance', contact: 'finance@hughesmayball.co.uk', photo: '/committee/chavara.jpg' },
+  { name: 'Adelyn Wu', title: 'Sponsorship', contact: 'sponsorship@hughesmayball.co.uk', photo: '/committee/addie.jpg' },
   { name: 'Oneir Raza', title: 'Ticketing', contact: 'ticketing@hughesmayball.co.uk' },
   { name: 'Abbie Gellatly', title: 'Food', contact: 'food@hughesmayball.co.uk' },
   { name: 'Lauren Wang YueQin', title: 'Drinks and Sustainability', contact: 'drinks@hughesmayball.co.uk' },
   { name: 'David Whyatt', title: 'Musical entertainment', contact: 'music@hughesmayball.co.uk' },
   { name: 'Linda Prüß', title: 'Scene', contact: 'scene@hughesmayball.co.uk' },
   { name: 'Minerva Maheshwari', title: 'Scene', contact: 'scene@hughesmayball.co.uk' },
-  { name: 'Jack Zhan', title: 'Scene', contact: 'scene@hughesmayball.co.uk' },
-  { name: 'Beth Sykes', title: 'Head of Marketing', contact: 'marketing@hughesmayball.co.uk' },
-  { name: 'Yihan Yue', title: 'Social Media', contact: 'media@hughesmayball.co.uk' },
-  { name: 'Zayne Zhang', title: 'Website', contact: 'website@hughesmayball.co.uk' },
-  { name: 'Nowsha Farha', title: 'Head of Operations', contact: 'operations@hughesmayball.co.uk' },
+  { name: 'Jack Zhan', title: 'Scene', contact: 'scene@hughesmayball.co.uk', photo: '/committee/jack.jpg' },
+  { name: 'Beth Sykes', title: 'Head of Marketing', contact: 'marketing@hughesmayball.co.uk', photo: '/committee/beth.jpg' },
+  { name: 'Yihan Yue', title: 'Social Media', contact: 'media@hughesmayball.co.uk', photo: '/committee/yihan.jpg' },
+  { name: 'Zayne Zhang', title: 'Website', contact: 'website@hughesmayball.co.uk', photo: '/committee/zayne.jpg' },
+  { name: 'Nowsha Farha', title: 'Head of Operations', contact: 'operations@hughesmayball.co.uk', photo: '/committee/nowsha.jpg' },
   { name: 'Xinyi Cao', title: 'Infrastructure', contact: 'infrastructure@hughesmayball.co.uk' },
-  { name: 'Asmita Narang', title: 'Personnel & Accessibility', contact: 'accessibility@hughesmayball.co.uk' },
-  { name: 'Mac', title: 'Security', contact: 'security@hughesmayball.co.uk' }
+  { name: 'Asmita Narang', title: 'Personnel & Accessibility', contact: 'accessibility@hughesmayball.co.uk', photo: '/committee/asmita.jpg' },
+  { name: 'Max Pralle', title: 'Security', contact: 'security@hughesmayball.co.uk', photo: '/committee/max.jpg' },
 ];
 
 const CommitteeMember = (member) => {
+
+  const ref = useRef(null);
+  const threshold = 0.5;
+
+  function callback(entries, observer) {
+    entries.forEach((entry) => {
+      const elem = entry.target;
+      if (entry.intersectionRatio >= threshold && !elem.classList.contains("transition")) {
+        elem.classList.add("transition");
+        setTimeout(() => {elem.classList.remove("grayscale-fg"); elem.classList.remove("transition")}, 2000);
+      }
+    });
+  }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(callback, { threshold });
+    const target = ref.current;
+    if (!target) return;
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  });
+
   return (
-    <div class="text-center text-gray-500 dark:text-gray-400">
-      <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="/avatar.jpg" alt={member.name} />
+    <div ref={ref} class="grayscale-fg text-center text-gray-500 dark:text-gray-400">
+      <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={member.photo || "/avatar.jpg"} alt={member.name} />
         <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           <a href="#">{member.name}</a>
         </h3>
@@ -35,7 +59,7 @@ const CommitteeMember = (member) => {
 
 const Committee = () => {
   return (
-    <section className="bg-gray-900">
+    <section className="bg-gray-900" id="committee">
       <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-8">
         {commiteeMembers.map((member, index) => {
           return (
