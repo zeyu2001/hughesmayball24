@@ -5,6 +5,7 @@ import Section from './components/Section';
 import Committee from './components/Committee';
 import Video from './components/Video';
 import Footer from './components/Footer';
+import Fixr from './components/Ticketing';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import {
   createBrowserRouter,
@@ -29,6 +30,8 @@ const Home = () => {
       <Video />
       <Section name="MEET THE COMMITTEE" backgroundImage="./committee_bg.jpg" />
       <Committee />
+      <Section name="GET TICKETS" backgroundImage="./ticketing_bg.jpg" />
+      <Fixr />
       <Footer />
     </ParallaxProvider>
   );

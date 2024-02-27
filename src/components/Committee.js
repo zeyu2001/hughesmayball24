@@ -8,7 +8,7 @@ const commiteeMembers = [
   { name: 'Oneir Raza', title: 'Ticketing', contact: 'ticketing@hughesmayball.co.uk' },
   { name: 'Abbie Gellatly', title: 'Food', contact: 'food@hughesmayball.co.uk' },
   { name: 'Lauren Wang YueQin', title: 'Drinks and Sustainability', contact: 'drinks@hughesmayball.co.uk' },
-  { name: 'David Whyatt', title: 'Musical entertainment', contact: 'music@hughesmayball.co.uk' },
+  { name: 'David Whyatt', title: 'Musical entertainment', contact: 'music@hughesmayball.co.uk', photo: '/committee/david.jpeg' },
   { name: 'Linda Prüß', title: 'Scene', contact: 'scene@hughesmayball.co.uk' },
   { name: 'Minerva Maheshwari', title: 'Scene', contact: 'scene@hughesmayball.co.uk' },
   { name: 'Jack Zhan', title: 'Scene', contact: 'scene@hughesmayball.co.uk', photo: '/committee/jack.jpg' },
@@ -16,7 +16,7 @@ const commiteeMembers = [
   { name: 'Yihan Yue', title: 'Social Media', contact: 'media@hughesmayball.co.uk', photo: '/committee/yihan.jpg' },
   { name: 'Zayne Zhang', title: 'Website', contact: 'website@hughesmayball.co.uk', photo: '/committee/zayne.jpg' },
   { name: 'Nowsha Farha', title: 'Head of Operations', contact: 'operations@hughesmayball.co.uk', photo: '/committee/nowsha.jpg' },
-  { name: 'Xinyi Cao', title: 'Infrastructure', contact: 'infrastructure@hughesmayball.co.uk' },
+  { name: 'Xinyi Cao', title: 'Infrastructure', contact: 'infrastructure@hughesmayball.co.uk', photo: '/committee/xinyi.jpeg' },
   { name: 'Asmita Narang', title: 'Personnel & Accessibility', contact: 'accessibility@hughesmayball.co.uk', photo: '/committee/asmita.jpg' },
   { name: 'Max Pralle', title: 'Security', contact: 'security@hughesmayball.co.uk', photo: '/committee/max.jpg' },
 ];

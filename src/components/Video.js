@@ -48,12 +48,9 @@ const VideoForeground = () => {
           ABOUT THE BALL
         </h1>
         <p className="my-6 text-lg leading-8 text-white drop-shadow-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-          molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-          numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-          optio, eaque rerum!
+          Coming soon...
         </p>
-        <a href="#" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-500 text-white">
+        <a href="/#tickets" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-500 text-white">
           Get Tickets <span aria-hidden="true">&rarr;</span>
         </a>
       </div>

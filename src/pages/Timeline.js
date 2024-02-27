@@ -84,13 +84,14 @@ const Timeline = () => {
     <ParallaxProvider>
       <Heading />
       <div className="items-center shadow bg-gray-800 border-gray-700 p-10">
-        <VerticalTimeline>
+        {/* <VerticalTimeline>
           {
             events.map(e => (
               <TimelineElement {...e} />
             ))
           }
-        </VerticalTimeline>
+        </VerticalTimeline> */}
+        <p className="text-white text-2xl">Coming soon...</p>
       </div>
     </ParallaxProvider>
   )
