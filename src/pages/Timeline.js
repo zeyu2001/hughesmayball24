@@ -91,7 +91,9 @@ const Timeline = () => {
             ))
           }
         </VerticalTimeline> */}
-        <p className="text-white text-2xl">Coming soon...</p>
+        <div style={{ height: "1000px" }} className="flex justify-center items-center p-10">
+          <p className="text-white text-4xl">Coming soon...</p>
+        </div>
       </div>
     </ParallaxProvider>
   )
