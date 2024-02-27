@@ -1,6 +1,7 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
+import { useEffect } from 'react';
 
 const events = [
   {
@@ -45,17 +46,43 @@ const Title = () => {
 }
 
 const Heading = () => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      const targets = document.querySelectorAll(".grayscale-fg");
+      if (!targets) return;
+
+      for (let target of targets) {
+        target.classList.add("transition");
+        setTimeout(() => target.classList.remove("grayscale-fg"), 2000);
+      }
+    }, 500);
+  });
+
   return (
     <ParallaxBanner
       layers={[
         { image: './hero_bg.jpg', speed: -20 },
+        {
+          image: './graphics/cherryblossom1.svg', speed: -20,
+          translateX: [-10, -10],
+          className: "grayscale-fg"
+        },
+        {
+          image: './graphics/ship.svg', speed: 0,
+          translateX: [40, -20],
+          className: "grayscale-fg"
+        },
         {
           speed: 0,
           children: (
             <Title />
           ),
         },
-        { image: './timeline_fg.png', speed: 20 },
+        {
+          image: './graphics/lady_cropped.svg', speed: 20,
+          className: "grayscale-fg"
+        }
       ]}
       className="aspect-[2/1]" style={{ height: '100vh' }}
     />
