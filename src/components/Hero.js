@@ -31,11 +31,13 @@ export default function Hero() {
 
   useEffect(() => {
     setTimeout(() => {
-      const target = document.querySelector(".grayscale-fg");
-      if (!target) return;
+      const targets = document.querySelectorAll(".grayscale-fg");
+      if (!targets) return;
 
-      target.classList.add("transition");
-      setTimeout(() => target.classList.remove("grayscale"), 2000);
+      for (let target of targets) {
+        target.classList.add("transition");
+        setTimeout(() => target.classList.remove("grayscale-fg"), 2000);
+      }
     }, 500);
   });
 
@@ -43,6 +45,16 @@ export default function Hero() {
     <ParallaxBanner
       layers={[
         { image: './hero_bg.jpg', speed: -20 },
+        { 
+          image: './graphics/cherryblossom1.svg', speed: -20,
+          translateX: [-10, -10],
+          className: "grayscale-fg"
+        },
+        { 
+          image: './graphics/ship.svg', speed: 0,
+          translateX: [40, -20],
+          className: "grayscale-fg"
+        },
         {
           speed: 0,
           children: (
@@ -50,7 +62,7 @@ export default function Hero() {
           ),
         },
         { 
-          image: './hero_fg.png', speed: 30,
+          image: './graphics/lady_cropped.svg', speed: 20,
           className: "grayscale-fg"
         }
       ]}

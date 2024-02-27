@@ -69,12 +69,17 @@ export default function Video() {
             <VideoLayer />
           ),
         },
+        { 
+          image: './graphics/Owl.svg', 
+          translateX: [50, -50], 
+          speed: 20
+        },
         {
           speed: -15,
           children: (
             <VideoForeground />
           ),
-        }
+        },
       ]}
       className="aspect-[2/1]" style={{ height: '100vh' }}
     />
