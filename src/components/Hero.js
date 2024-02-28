@@ -1,5 +1,6 @@
 import { ParallaxBanner } from 'react-scroll-parallax';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import { Hearts } from 'react-loader-spinner';
 
 const MainSection = () => {
   const ref = useRef(null);
@@ -41,32 +42,64 @@ export default function Hero() {
     }, 500);
   });
 
+  const [loading, setLoading] = useState(true);
+  const counter = useRef(0);
+
+  const imageLoaded = () => {
+    counter.current += 1;
+    if (counter.current >= 4) {
+      setLoading(false);
+    }
+  }
+
+  for (let image of ["./hero_bg.jpg", "./graphics/cherryblossom1.svg", "./graphics/ship.svg", "./graphics/lady_cropped.svg"]) {
+    const img = new Image();
+    img.src = image;
+    img.onload = imageLoaded;
+  }
+
   return (
-    <ParallaxBanner
-      layers={[
-        { image: './hero_bg.jpg', speed: -20 },
-        { 
-          image: './graphics/cherryblossom1.svg', speed: -20,
-          translateX: [-10, -10],
-          className: "grayscale-fg"
-        },
-        { 
-          image: './graphics/ship.svg', speed: 0,
-          translateX: [40, -20],
-          className: "grayscale-fg"
-        },
-        {
-          speed: 0,
-          children: (
-            <MainSection />
-          ),
-        },
-        { 
-          image: './graphics/lady_cropped.svg', speed: 20,
-          className: "grayscale-fg"
-        }
-      ]}
-      className="aspect-[2/1]" style={{ height: '100vh' }}
-    />
+    <>
+      {loading ? (
+        <div className="fixed inset-0 flex items-center justify-center bg-black z-50 w-full h-full">
+          <Hearts
+            height="80"
+            width="80"
+            color="red"
+            ariaLabel="hearts-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+          <p className="text-white text-2xl">Loading...</p>
+        </div>
+      ) : (
+        <ParallaxBanner
+          layers={[
+            { image: './hero_bg.jpg', speed: -20 },
+            {
+              image: './graphics/cherryblossom1.svg', speed: -20,
+              translateX: [-10, -10],
+              className: "grayscale-fg",
+            },
+            {
+              image: './graphics/ship.svg', speed: 0,
+              translateX: [40, -20],
+              className: "grayscale-fg"
+            },
+            {
+              speed: 0,
+              children: (
+                <MainSection />
+              ),
+            },
+            {
+              image: './graphics/lady_cropped.svg', speed: 20,
+              className: "grayscale-fg"
+            }
+          ]}
+          className="aspect-[2/1]" style={{ height: '100vh' }}
+        />)}
+    </>
   )
 }
