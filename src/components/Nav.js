@@ -41,7 +41,7 @@ export default function Nav() {
         ))}
       </div>
       <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="/#tickets" className="text-md font-semibold leading-6 text-white">
+        <a href="https://fixr.co/event/43708514" className="text-md font-semibold leading-6 text-white" target="_blank" rel="noreferrer">
           Get Tickets <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
@@ -74,6 +74,13 @@ export default function Nav() {
                     {item.name}
                   </a>
                 ))}
+                  <a
+                    href="https://fixr.co/event/43708514"
+                    target="_blank" rel="noreferrer"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700"
+                  >
+                    Get Tickets <span aria-hidden="true">&rarr;</span>
+                  </a>
               </div>
             </div>
           </div>

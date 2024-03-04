@@ -1,15 +1,15 @@
 const Fixr = () => {
   return (
     <section className="bg-gray-900" id="tickets">
-      {/* <iframe src="https://fixr.co/event/43708514?compact=true&theme=dark" 
+      <iframe src="https://fixr.co/event/43708514?compact=true&theme=dark" 
         width="100%" 
-        height="100%"
+        height="1000px"
         title="Tickets"
       >
-      </iframe> */}
-      <div style={{ height: "1000px" }} className="flex justify-center items-center p-10">
+      </iframe>
+      {/* <div style={{ height: "1000px" }} className="flex justify-center items-center p-10">
         <p className="text-white text-4xl">Tickets coming soon...</p>
-      </div>
+      </div> */}
     </section>
   )
 }
