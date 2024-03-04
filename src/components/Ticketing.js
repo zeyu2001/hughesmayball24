@@ -1,9 +1,9 @@
 const Fixr = () => {
   return (
-    <section className="bg-gray-900" id="tickets">
+    <section className="bg-gray-900 flex items-center justify-center h-screen" id="tickets">
       <iframe src="https://fixr.co/event/43708514?compact=true&theme=dark" 
-        width="100%" 
-        height="1000px"
+        width="80%" 
+        height="80%"
         title="Tickets"
       >
       </iframe>
