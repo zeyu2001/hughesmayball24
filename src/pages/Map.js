@@ -86,7 +86,7 @@ const Map = () => {
           Coming soon...
         </div>
         <div className="my-10">
-          <img src="./sitemap.png" alt="sitemap" className="w-3/5 mx-auto" />
+          {/* <img src="./sitemap.png" alt="sitemap" className="w-3/5 mx-auto" /> */}
         </div>
 
         <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-md">Getting Here</h1>

@@ -44,11 +44,11 @@ const VideoForeground = () => {
   return (
     <div ref={ref} className="grayscale absolute inset-0 flex items-center justify-center backdrop-blur-sm">
       <div className="container px-5">
-        <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-lg">
+        <h1 className="text-white mt-15 lg:mt-0 text-4xl lg:text-6xl drop-shadow-lg">
           ABOUT THE BALL
         </h1>
-        <p className="my-6 text-lg leading-8 text-white drop-shadow-lg">
-          Coming soon...
+        <p className="my-10 text-lg leading-8 text-white drop-shadow-lg">
+          Join Hughes Hall for a magical night of mystery, reverie, and fun at our 2024 May Ball - Wanderlust. Your ticket entitles you to unlimited food, drink, and entertainment for the whole night, along with the potential to discover secrets and treasures along the way. We look forward to welcoming you on June 15, 2024 - gates open at 7:00pm on Gresham Road.
         </p>
         <a href="/#tickets" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-500 text-white">
           Get Tickets <span aria-hidden="true">&rarr;</span>
