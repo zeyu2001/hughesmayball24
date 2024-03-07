@@ -46,9 +46,9 @@ const CommitteeMember = (member) => {
   });
 
   return (
-    <div ref={ref} class="grayscale-fg text-center text-gray-500 dark:text-gray-400">
+    <div ref={ref} class="grayscale-fg text-center text-gray-400">
       <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={member.photo || "/avatar.jpg"} alt={member.name} />
-        <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h3 class="mb-1 text-2xl font-bold tracking-tight text-white">
           <a href="#">{member.name}</a>
         </h3>
         <p>{member.title}</p>
