@@ -2,15 +2,16 @@ import { Parallax } from 'react-scroll-parallax';
 import { useEffect, useRef } from 'react';
 
 const commiteeMembers = [
-  { name: 'Jennifer Schwartz', title: 'President', contact: 'president@hughesmayball.co.uk' },
+  { name: 'Anushka', title: 'Head of Events', contact: 'events@hughesmayball.co.uk', photo: '/committee/anushka.jpeg' },
+  { name: 'Jennifer Schwartz', title: 'President', contact: 'president@hughesmayball.co.uk', photo: '/committee/jennifer.jpeg' },
   { name: 'Chavara Naidoo', title: 'Head of Finance', contact: 'finance@hughesmayball.co.uk', photo: '/committee/chavara.jpg' },
   { name: 'Adelyn Wu', title: 'Sponsorship', contact: 'sponsorship@hughesmayball.co.uk', photo: '/committee/addie.jpg' },
-  { name: 'Oneir Raza', title: 'Ticketing', contact: 'ticketing@hughesmayball.co.uk' },
-  { name: 'Abbie Gellatly', title: 'Food', contact: 'food@hughesmayball.co.uk' },
-  { name: 'Lauren Wang YueQin', title: 'Drinks and Sustainability', contact: 'drinks@hughesmayball.co.uk' },
+  { name: 'Oneir Raza', title: 'Ticketing', contact: 'ticketing@hughesmayball.co.uk', photo: '/committee/oneir.jpeg' },
+  { name: 'Abbie Gellatly', title: 'Food', contact: 'food@hughesmayball.co.uk', photo: '/committee/abbie.jpeg' },
+  { name: 'Lauren Wang YueQin', title: 'Drinks and Sustainability', contact: 'drinks@hughesmayball.co.uk', photo: '/committee/yueqin.jpeg' },
   { name: 'David Whyatt', title: 'Musical entertainment', contact: 'music@hughesmayball.co.uk', photo: '/committee/david.jpeg' },
-  { name: 'Linda Prüß', title: 'Scene', contact: 'scene@hughesmayball.co.uk' },
-  { name: 'Minerva Maheshwari', title: 'Scene', contact: 'scene@hughesmayball.co.uk' },
+  { name: 'Linda Prüß', title: 'Scene', contact: 'scene@hughesmayball.co.uk', photo: '/committee/linda.jpeg' },
+  { name: 'Minerva Maheshwari', title: 'Scene', contact: 'scene@hughesmayball.co.uk', photo: '/committee/minerva.jpeg' },
   { name: 'Jack Zhan', title: 'Scene', contact: 'scene@hughesmayball.co.uk', photo: '/committee/jack.jpg' },
   { name: 'Beth Sykes', title: 'Head of Marketing', contact: 'marketing@hughesmayball.co.uk', photo: '/committee/beth.jpg' },
   { name: 'Yihan Yue', title: 'Social Media', contact: 'media@hughesmayball.co.uk', photo: '/committee/yihan.jpg' },
