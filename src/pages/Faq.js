@@ -7,7 +7,7 @@ const Title = () => {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-md">
-            Sponsorship
+            FAQ
           </h1>
         </div>
       </div>
@@ -59,12 +59,12 @@ const Heading = () => {
   )
 }
 
-const Sponsorship = () => {
+const Faq = () => {
   return (
     <ParallaxProvider>
       <Heading />
       <div className="items-center shadow bg-gray-800 border-gray-700 p-10">
-        <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-md my-10">Sponsorship</h1>
+        <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-md my-10">FAQ</h1>
         <div className="mt-6 text-lg leading-8 text-white drop-shadow-md">
           Coming soon...
         </div>
@@ -73,4 +73,4 @@ const Sponsorship = () => {
   )
 }
 
-export default Sponsorship;
+export default Faq;
