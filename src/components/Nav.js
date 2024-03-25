@@ -9,6 +9,7 @@ const navigation = [
   { name: 'FAQ', href: '/faq' },
   { name: 'Accessibility & Sustainability', href: '/accessibility' },
   { name: 'Map', href: '/map' },
+  { name: 'Sponsorship', href: '/sponsorship' },
 ]
 
 export default function Nav() {

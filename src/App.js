@@ -15,6 +15,7 @@ import {
 import Timeline from './pages/Timeline';
 import Nav from './components/Nav';
 import Map from './pages/Map';
+import Sponsorship from './pages/Sponsorship';
 
 const NotFound = () => {
   return (
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/map",
     element: <Map />,
+  },
+  {
+    path: "/sponsorship",
+    element: <Sponsorship />,
   },
   {
     path: "*",
