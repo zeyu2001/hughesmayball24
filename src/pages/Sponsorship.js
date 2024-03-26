@@ -64,9 +64,11 @@ const Sponsorship = () => {
     <ParallaxProvider>
       <Heading />
       <div className="items-center shadow bg-gray-800 border-gray-700 p-10">
-        <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-md my-10">Sponsorship</h1>
         <div className="mt-6 text-lg leading-8 text-white drop-shadow-md">
-          Coming soon...
+          <img src="/sponsorship.png" alt="sponsorship" className="w-1/2 mx-auto" />
+          <p className="mt-6 text-center">
+            We are looking for sponsors to help us make this event a success. If you are interested in sponsoring us, please contact us at <a href="mailto:sponsorship@hughesmayball.co.uk" className="text-blue-500">sponsorship@hughesmayball.co.uk</a>.
+          </p>
         </div>
       </div>
     </ParallaxProvider>
