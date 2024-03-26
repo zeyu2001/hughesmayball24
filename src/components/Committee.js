@@ -2,11 +2,11 @@ import { Parallax } from 'react-scroll-parallax';
 import { useEffect, useRef } from 'react';
 
 const commiteeMembers = [
-  { name: 'Anushka', title: 'Head of Events', contact: 'events@hughesmayball.co.uk', photo: '/committee/anushka.jpeg' },
   { name: 'Jennifer Schwartz', title: 'President', contact: 'president@hughesmayball.co.uk', photo: '/committee/jennifer.jpeg' },
   { name: 'Chavara Naidoo', title: 'Head of Finance', contact: 'finance@hughesmayball.co.uk', photo: '/committee/chavara.jpg' },
   { name: 'Adelyn Wu', title: 'Sponsorship', contact: 'sponsorship@hughesmayball.co.uk', photo: '/committee/addie.jpg' },
   { name: 'Oneir Raza', title: 'Ticketing', contact: 'ticketing@hughesmayball.co.uk', photo: '/committee/oneir.jpeg' },
+  { name: 'Anushka', title: 'Head of Events', contact: 'events@hughesmayball.co.uk', photo: '/committee/anushka.jpeg' },
   { name: 'Abbie Gellatly', title: 'Food', contact: 'food@hughesmayball.co.uk', photo: '/committee/abbie.jpeg' },
   { name: 'Lauren Wang YueQin', title: 'Drinks and Sustainability', contact: 'drinks@hughesmayball.co.uk', photo: '/committee/yueqin.jpeg' },
   { name: 'David Whyatt', title: 'Musical entertainment', contact: 'music@hughesmayball.co.uk', photo: '/committee/david.jpeg' },
