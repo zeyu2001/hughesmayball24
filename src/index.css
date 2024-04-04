@@ -28,3 +28,8 @@
 .grayscale-fg.transition {
   filter: grayscale(0%);
 }
+
+.question .arrow.open {
+  display: inline-block;
+  transform: rotate(-180deg);
+}
