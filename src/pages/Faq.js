@@ -281,7 +281,7 @@ const FaqDropdown = () => {
 
   return (
     <div className="faq-dropdown">
-      {['General', 'Ticketing', 'Accessiblity', 'Food & Drink'].map(category => (
+      {['General', 'Ticketing', 'Accessibility', 'Food & Drink'].map(category => (
         <FaqCategory key={category} category={category} faqs={categories[category]} />
       ))}
     </div>
