@@ -63,7 +63,7 @@ const Heading = () => {
 
 const TimelineCarousel = ({ images }) => {
   return (
-    <Carousel showArrows={true} showThumbs={true} emulateTouch={true} className="w-full">
+    <Carousel showArrows={true} showThumbs={true} emulateTouch={true} className="w-full max-w-3xl">
       {images.map((image, index) => (
         <div key={index}>
           <img src={image} />
