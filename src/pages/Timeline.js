@@ -1,35 +1,7 @@
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
 import { useEffect } from 'react';
-
-const events = [
-  {
-    time: '8pm',
-    title: 'Event 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed semper luctus.'
-  },
-  {
-    'time': '9pm',
-    'title': 'Event 2',
-    'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed semper luctus.'
-  },
-  {
-    'time': '10pm',
-    'title': 'Event 3',
-    'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed semper luctus.'
-  },
-  {
-    'time': '11pm',
-    'title': 'Event 4',
-    'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed semper luctus.'
-  },
-  {
-    'time': '12am',
-    'title': 'Event 5',
-    'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed semper luctus.'
-  }
-]
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const Title = () => {
   return (
@@ -89,37 +61,57 @@ const Heading = () => {
   )
 }
 
-const TimelineElement = ({ time, title, description }) => {
+const TimelineCarousel = ({ images }) => {
   return (
-    <VerticalTimelineElement
-      className="vertical-timeline-element--work"
-      contentStyle={{ background: '#36454F', color: '#fff' }}
-      contentArrowStyle={{ borderRight: '7px solid #36454F' }}
-      date={time}
-      iconStyle={{ background: '#36454F', color: '#fff' }}
-    >
-      <h3 className="text-2xl vertical-timeline-element-title">{title}</h3>
-      <p>
-        {description}
-      </p>
-    </VerticalTimelineElement>
-  )
+    <Carousel showArrows={true} showThumbs={true} emulateTouch={true} className="w-full">
+      {images.map((image, index) => (
+        <div key={index}>
+          <img src={image} />
+        </div>
+      ))}
+    </Carousel>
+  );
 }
 
 const Timeline = () => {
   return (
     <ParallaxProvider>
       <Heading />
-      <div className="items-center shadow bg-gray-800 border-gray-700 p-10">
-        {/* <VerticalTimeline>
-          {
-            events.map(e => (
-              <TimelineElement {...e} />
-            ))
-          }
-        </VerticalTimeline> */}
-        <div style={{ height: "1000px" }} className="flex justify-center items-center p-10">
-          <p className="text-white text-4xl">Coming soon...</p>
+      <div className="shadow bg-gray-800 border-gray-700 p-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="col-span-1 flex justify-center items-center p-2">
+            <TimelineCarousel images={[
+              "./programme/mcr1.png",
+              "./programme/mcr2.png",
+              "./programme/mcr3.png",
+            ]} />
+          </div>
+          <div className="col-span-1 flex justify-center items-center p-2">
+            <TimelineCarousel images={[
+              "./programme/ull1.png",
+              "./programme/ull2.png",
+              "./programme/ull3.png",
+            ]} />
+          </div>
+          <div className="flex justify-center items-center p-2">
+            <TimelineCarousel images={[
+              "./programme/dh1.png",
+              "./programme/dh2.png",
+            ]} />
+          </div>
+          <div className="flex justify-center items-center p-2">
+            <TimelineCarousel images={[
+              "./programme/ms1.png",
+              "./programme/ms2.png",
+              "./programme/ms3.png",
+            ]} />
+          </div>
+          <div className="flex justify-center items-center p-2 md:col-span-2">
+            <TimelineCarousel images={[
+              "./programme/p1.png",
+              "./programme/p2.png",
+            ]} />
+          </div>
         </div>
       </div>
     </ParallaxProvider>

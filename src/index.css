@@ -33,3 +33,7 @@
   display: inline-block;
   transform: rotate(-180deg);
 }
+
+.control-arrow {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}

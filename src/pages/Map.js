@@ -79,14 +79,8 @@ const Map = () => {
       <Heading />
       <div className="items-center shadow bg-gray-800 border-gray-700 p-10">
         <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-md my-10">Sitemap</h1>
-        <div className="mt-6 text-lg leading-8 text-white drop-shadow-md">
-          {/* <p className="mt-4"> Room 1: Something </p>
-          <p className="mt-4"> Room 2: Something else </p>
-          <p className="mt-4"> Room 3: Something else else </p> */}
-          Coming soon...
-        </div>
         <div className="my-10">
-          {/* <img src="./sitemap.png" alt="sitemap" className="w-3/5 mx-auto" /> */}
+          <img src="./graphics/map.png" alt="sitemap" className="w-full mx-auto" />
         </div>
 
         <h1 className="text-white mt-20 lg:mt-0 text-4xl lg:text-6xl drop-shadow-md">Getting Here</h1>
