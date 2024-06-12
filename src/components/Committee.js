@@ -47,9 +47,9 @@ const CommitteeMember = (member) => {
   });
 
   return (
-    <div ref={ref} class="grayscale-fg text-center text-gray-400">
-      <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={member.photo || "/avatar.jpg"} alt={member.name} />
-        <h3 class="mb-1 text-2xl font-bold tracking-tight text-white">
+    <div ref={ref} className="grayscale-fg text-center text-gray-400">
+      <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={member.photo || "/avatar.jpg"} alt={member.name} />
+        <h3 className="mb-1 text-2xl font-bold tracking-tight text-white">
           <a href="#">{member.name}</a>
         </h3>
         <p>{member.title}</p>
@@ -61,7 +61,7 @@ const CommitteeMember = (member) => {
 const Committee = () => {
   return (
     <section className="bg-gray-900" id="committee">
-      <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-8">
+      <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-8">
         {commiteeMembers.map((member, index) => {
           return (
             <Parallax key={index} scale={[0.8, 1.2, 'easeInQuad']}>
