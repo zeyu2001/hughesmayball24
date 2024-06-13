@@ -160,7 +160,7 @@ const faqs = [
   {
     category: "Ticketing",
     question: "How do I get into the ball? Wristbands?",
-    answer: "Guests will enter the ball from the Gresham Road entrance to Hughes Hall. To speed up the queuing system, all ticket holders will be invited to collect wristbands in the week before the ball. Upon arrival on the night of the ball, security will see your wristband and you will be allowed to enter the ball. For guests who are unable to collect wristbands in advance, you will be able to get your wristband on the night of the ball. However, we encourage as many guests as possible to collect their wristbands in advance to lessen waiting time!"
+    answer: "Guests will enter the ball from the Gresham Road entrance to Hughes Hall. To speed up the queuing system, Hughes ticket holders will be invited to collect wristbands in the week before the ball. Upon arrival on the night of the ball, security will see your wristband and you will be allowed to enter the ball. For guests who are unable to collect wristbands in advance, you will be able to get your wristband on the night of the ball. However, we encourage as many guests as possible to collect their wristbands in advance to lessen waiting time!"
   },
   {
     category: "Ticketing",
